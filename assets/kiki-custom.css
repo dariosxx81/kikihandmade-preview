@@ -1,0 +1,1230 @@
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+/* ==========================================================================
+   KIKI HANDMADE — DESIGN SYSTEM & LUXURY EDITORIAL STYLESHEET
+   Fraunces (Story) • DM Sans (Function) • Beth Ellen (Emotion)
+   ========================================================================== */
+
+:root {
+  /* Brand Palette */
+  --kiki-cream: #FAF6F0;
+  --kiki-cream-light: #FDFBF7;
+  --kiki-cream-card: #F4EFE6;
+  --kiki-bordeaux: #6D1E2F;
+  --kiki-bordeaux-dark: #531422;
+  --kiki-fuchsia: #DF3882;
+  --kiki-fuchsia-hover: #C5296E;
+  --kiki-fuchsia-soft: #FDEBF3;
+  --kiki-charcoal: #1E1E1E;
+  --kiki-gray: #666666;
+  --kiki-border: #E8E2D8;
+
+  /* Typography Stacks */
+  --font-story: 'Fraunces', Georgia, serif;
+  --font-func: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-emotion: 'Beth Ellen', cursive;
+}
+
+/* ==========================================================================
+   1. GLOBAL TYPOGRAPHY & BASE RESET (SAFE INHERITANCE)
+   ========================================================================== */
+body {
+  font-family: var(--font-func) !important;
+  color: var(--kiki-charcoal);
+  background-color: var(--kiki-cream) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.body-font,
+p,
+label {
+  font-family: var(--font-func) !important;
+}
+
+/* Headings & Editorial Titles -> FRAUNCES */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.heading-font,
+.h1-xlarge,
+.h1-large,
+.hero-title,
+.section-header h2,
+.collection-banner h1,
+.collection-tabs .h2,
+.slideshow__slide-content--heading,
+.slideshow__slide-content--heading *,
+.slideshow__slide-content--heading div,
+.split-text,
+.split-text * {
+  font-family: var(--font-story) !important;
+  letter-spacing: -0.02em !important;
+}
+
+.slideshow__slide-content--heading em,
+.slideshow__slide-content--heading i,
+.slideshow__slide-content--heading .italic,
+.slideshow__slide-content--heading em *,
+.split-text em,
+.split-text em * {
+  font-style: italic !important;
+  font-family: var(--font-story) !important;
+}
+
+/* Emotion Accents -> BETH ELLEN (Calligraphic Signature) */
+.kiki-emotion,
+.kiki-signature,
+.kiki-handwritten,
+.kiki-accent-script,
+.subheading {
+  font-family: var(--font-emotion) !important;
+  font-weight: 400 !important;
+  color: var(--kiki-fuchsia) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* ==========================================================================
+   2. ANNOUNCEMENT BAR (TOP HEADER)
+   ========================================================================== */
+.announcement-bar,
+.announcement-bar-section {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+}
+
+.announcement-bar a,
+.announcement-bar p,
+.announcement-bar span,
+.announcement-bar--item {
+  color: #FFFFFF !important;
+  font-family: var(--font-func) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  font-size: 0.78rem !important;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+/* Header Structure & Solid Stability */
+.header-section,
+.header-wrapper,
+.header,
+.header.transparent--true,
+theme-header.header {
+  background-color: var(--kiki-cream) !important;
+  position: relative !important;
+  border-bottom: 1px solid var(--kiki-border) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
+}
+
+.header.transparent--true:before {
+  display: none !important;
+}
+
+/* Navigation Links - Permanent Charcoal, Hover Fuchsia */
+.header .thb-full-menu > li > a,
+.header .thb-full-menu a,
+.header .menu-item a,
+.header .header__menu-item,
+.header.transparent--true:not(:hover) .thb-full-menu > li > a {
+  font-family: var(--font-func) !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--kiki-charcoal) !important;
+  transition: color 0.2s ease !important;
+}
+
+.header .thb-full-menu > li > a:hover,
+.header .thb-full-menu a:hover,
+.header .menu-item a:hover {
+  color: var(--kiki-fuchsia) !important;
+}
+
+/* Header Icons (User, Search, Cart) - Permanent High Contrast */
+.header .thb-secondary-area,
+.header .thb-secondary-area-item,
+.header .thb-secondary-area svg,
+.header.transparent--true:not(:hover) svg,
+.header svg {
+  color: var(--kiki-charcoal) !important;
+  fill: none !important;
+  stroke: var(--kiki-charcoal) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.header .thb-secondary-area svg path,
+.header.transparent--true:not(:hover) svg path,
+.header svg path {
+  stroke: var(--kiki-charcoal) !important;
+  transition: stroke 0.2s ease !important;
+}
+
+.header .thb-secondary-area-item:hover svg,
+.header .thb-secondary-area-item:hover svg path,
+.header .thb-secondary-area a:hover svg,
+.header .thb-secondary-area a:hover svg path {
+  stroke: var(--kiki-fuchsia) !important;
+  color: var(--kiki-fuchsia) !important;
+}
+
+/* Cart Count Badge - Fuchsia with White Text */
+.header .thb-item-count,
+.header.transparent--true:not(:hover) .thb-secondary-area .thb-item-count {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.7rem !important;
+  border-radius: 9999px !important;
+}
+
+/* ==========================================================================
+   4. BUTTONS & CALL-TO-ACTIONS (SAFE CONTRAST)
+   ========================================================================== */
+.button,
+button.button,
+input[type="submit"].button,
+.btn {
+  font-family: var(--font-func) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  border-radius: 9999px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Primary Solid Button -> KIKI FUCHSIA PILL WITH WHITE TEXT */
+.button.button--primary,
+.button.solid,
+.button:not(.outline):not(.button--secondary):not(.text-button),
+.slideshow .button,
+.slideshow a.button,
+.single-add-to-cart-button:not([disabled]):not(.sold-out),
+.add_to_cart:not([disabled]) {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--kiki-fuchsia) !important;
+  box-shadow: 0 4px 14px rgba(223, 56, 130, 0.25) !important;
+}
+
+.button.button--primary *,
+.button.solid *,
+.button:not(.outline):not(.button--secondary):not(.text-button) *,
+.slideshow .button *,
+.slideshow a.button *,
+.single-add-to-cart-button:not([disabled]):not(.sold-out) *,
+.add_to_cart:not([disabled]) * {
+  color: #FFFFFF !important;
+}
+
+.button.button--primary:hover,
+.button.solid:hover,
+.button:not(.outline):not(.button--secondary):not(.text-button):hover,
+.slideshow .button:hover,
+.slideshow a.button:hover,
+.single-add-to-cart-button:not([disabled]):not(.sold-out):hover,
+.add_to_cart:not([disabled]):hover {
+  background-color: var(--kiki-fuchsia-hover) !important;
+  border-color: var(--kiki-fuchsia-hover) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(223, 56, 130, 0.35) !important;
+}
+
+/* Outline Buttons on Light/Cream Backgrounds -> BORDEAUX PILL */
+.button.outline,
+.button.button--secondary {
+  background-color: transparent !important;
+  border: 1.5px solid var(--kiki-bordeaux) !important;
+  color: var(--kiki-bordeaux) !important;
+}
+
+.button.outline *,
+.button.button--secondary * {
+  color: var(--kiki-bordeaux) !important;
+}
+
+.button.outline:hover,
+.button.button--secondary:hover {
+  background-color: var(--kiki-bordeaux) !important;
+  color: #FFFFFF !important;
+  border-color: var(--kiki-bordeaux) !important;
+}
+
+.button.outline:hover *,
+.button.button--secondary:hover * {
+  color: #FFFFFF !important;
+}
+
+/* Rich Text Editorial Button ("Il diario di kiki") -> SOLID BORDEAUX PILL */
+.rich-text .button,
+.rich-text a.button,
+.rich-text a.btn {
+  background-color: var(--kiki-bordeaux) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--kiki-bordeaux) !important;
+  border-radius: 9999px !important;
+  padding: 14px 36px !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 15px rgba(109, 30, 47, 0.25) !important;
+  display: inline-block !important;
+}
+
+.rich-text .button *,
+.rich-text a.button * {
+  color: #FFFFFF !important;
+}
+
+.rich-text .button:hover,
+.rich-text a.button:hover {
+  background-color: var(--kiki-fuchsia) !important;
+  border-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(223, 56, 130, 0.35) !important;
+}
+
+.rich-text .button:hover *,
+.rich-text a.button:hover * {
+  color: #FFFFFF !important;
+}
+
+/* Gallery & Category Buttons ("Giacche e camicie", "Cappotti e trench") */
+.gallery__item .text-button,
+.gallery__item a.button,
+.gallery__item .button,
+.gallery .text-button,
+.gallery-item-button,
+.gallery a.text-button {
+  display: inline-block !important;
+  background: #FFFFFF !important;
+  color: #1E1E1E !important;
+  padding: 12px 28px !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+.gallery__item .text-button:hover,
+.gallery__item a.button:hover,
+.gallery__item .button:hover,
+.gallery .text-button:hover,
+.gallery-item-button:hover,
+.gallery a.text-button:hover {
+  background: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+  border-color: var(--kiki-fuchsia) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(223, 56, 130, 0.4) !important;
+}
+
+.gallery__item .text-button *,
+.gallery__item a.button *,
+.gallery .text-button * {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Disabled & Sold Out Buttons */
+.single-add-to-cart-button[disabled],
+.single-add-to-cart-button.sold-out,
+.button[disabled] {
+  background-color: #E5DFD7 !important;
+  border: 1px solid #D8D1C7 !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+.single-add-to-cart-button[disabled] *,
+.single-add-to-cart-button.sold-out *,
+.button[disabled] * {
+  color: #8E877D !important;
+}
+
+/* ==========================================================================
+   5. CHAT WIDGET & FLOATING LAUNCHERS (CRITICAL CONTRAST FIX)
+   ========================================================================== */
+#shopify-chat,
+.shopify-chat,
+[class*="chat-button"],
+[class*="chat-launcher"],
+[id*="dummy-chat-button"],
+[aria-label*="chat" i],
+[aria-label*="Chat" i],
+.chat-button {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+}
+
+#shopify-chat *,
+.shopify-chat *,
+[class*="chat-button"] *,
+[class*="chat-launcher"] *,
+[id*="dummy-chat-button"] *,
+[aria-label*="chat" i] *,
+[aria-label*="Chat" i] *,
+.chat-button * {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+iframe#chat-button,
+#shopify-chat iframe,
+.chat-button iframe {
+  filter: brightness(1.35) saturate(1.15) !important;
+  background-color: transparent !important;
+}
+
+iframe#chat-button,
+#shopify-chat button,
+.chat-button button {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   6. SCROLLING TICKER (EDITORIAL LUXURY BANNER)
+   ========================================================================== */
+.scrolling-text {
+  background-color: var(--kiki-bordeaux) !important;
+  padding: 18px 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scrolling-text,
+.scrolling-text *,
+.scrolling-text .scrolling-text__item,
+.scrolling-text span,
+.scrolling-text p {
+  color: #FFFFFF !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+}
+
+.scrolling-text svg,
+.scrolling-text img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* ==========================================================================
+   7. HOMEPAGE & COLLECTION TABS (KIKI HANDMADE / KIKI BOUTIQUE)
+   ========================================================================== */
+.collection-tabs {
+  background-color: var(--kiki-cream) !important;
+  padding-top: 40px !important;
+  padding-bottom: 25px !important;
+}
+
+.collection-tabs__list {
+  display: flex;
+  gap: 28px;
+  border-bottom: 2px solid var(--kiki-border);
+  margin-bottom: 35px;
+}
+
+.collection-tabs__list button,
+.collection-tabs__list a,
+.collection-tabs .tab-button {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--kiki-charcoal) !important;
+  padding-bottom: 14px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.collection-tabs__list button.is-active,
+.collection-tabs__list a.is-active,
+.collection-tabs .tab-button.active {
+  color: var(--kiki-fuchsia) !important;
+  border-bottom: 3px solid var(--kiki-fuchsia) !important;
+}
+
+/* ==========================================================================
+   7. ULTRA-MODERN PRODUCT CARDS (HAUTE COUTURE SPEC)
+   ========================================================================== */
+.product-card {
+  background-color: #FFFFFF !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(232, 226, 216, 0.8) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(109, 30, 47, 0.12) !important;
+  border-color: rgba(223, 56, 130, 0.35) !important;
+}
+
+/* Image container & zoom */
+.product-card .product-card--featured-image {
+  margin-bottom: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 16px 16px 0 0 !important;
+  background: #FDFBF7 !important;
+}
+
+.product-card .product-card--featured-image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.product-card:hover .product-card--featured-image img {
+  transform: scale(1.04) !important;
+}
+
+/* Quick View ("UN'OCCHIATA VELOCE") Button - FUCHSIA */
+.product-card .product-card-quickview,
+.product-card .product-card-quickview--button {
+  background: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+  height: 44px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.product-card .product-card-quickview span,
+.product-card .product-card-quickview--button span {
+  color: #FFFFFF !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.product-card .product-card-quickview:hover,
+.product-card .product-card-quickview--button:hover {
+  background: var(--kiki-fuchsia-hover) !important;
+}
+
+/* Product Info Area - Generous Padding & Vertical Separation */
+.product-card .product-card-info {
+  padding: 22px 22px 26px 22px !important;
+  background-color: #FFFFFF !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  flex: 1 !important;
+}
+
+/* Product Title */
+.product-card-title,
+.product-card-title a,
+.product-card .product-title a {
+  font-family: var(--font-story) !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--kiki-charcoal) !important;
+  margin-bottom: 0 !important;
+  display: block !important;
+  transition: color 0.2s ease !important;
+}
+
+.product-card-title:hover,
+.product-card-title a:hover {
+  color: var(--kiki-fuchsia) !important;
+}
+
+/* Product Price */
+.product-card .price,
+.product-card .price .amount,
+.product-card .price ins,
+.product-card .price-item {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  color: var(--kiki-bordeaux) !important;
+  letter-spacing: 0.03em !important;
+  margin-top: 0 !important;
+  display: inline-block !important;
+}
+
+/* Featured Collection (Abbigliamento Uomo) Luxury Breathing Room */
+.featured-collection,
+.section-featured-collection {
+  padding-top: 85px !important;
+  padding-bottom: 60px !important;
+}
+
+.featured-collection .section-header {
+  margin-bottom: 35px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .featured-collection,
+  .section-featured-collection {
+    padding-top: 55px !important;
+    padding-bottom: 40px !important;
+  }
+}
+
+/* Badges (Pezzo Unico, Felpa over, Sconto) */
+.product-card .badge,
+.product-card .product-card--badges .badge {
+  border-radius: 9999px !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 5px 12px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ==========================================================================
+   7. PRODUCT DETAIL PAGE (EDITORIAL ALIGNMENT)
+   ========================================================================== */
+.thb-product-detail .product-title {
+  font-family: var(--font-story) !important;
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  text-transform: capitalize !important;
+  color: var(--kiki-charcoal) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Vendor signature -> BETH ELLEN FUCHSIA */
+.thb-product-detail .product-vendor,
+.thb-product-detail .product--text.style_vendor,
+.thb-product-detail .product--text.style_vendor p,
+.thb-product-detail .product--text.style_vendor span {
+  font-family: var(--font-emotion) !important;
+  color: var(--kiki-fuchsia) !important;
+  font-size: 1.35rem !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  opacity: 1 !important;
+  margin-bottom: 0.35rem !important;
+  display: block;
+}
+
+/* Free shipping banner */
+.free-shipping--text,
+.free-shipping {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+/* ==========================================================================
+   8. CLEANUP OF HACKY FLOATS & OVERLAPS IN SECTIONS
+   ========================================================================== */
+.single-image-section img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Ensure clean spacing for Rich text sections */
+.rich-text {
+  background-color: var(--kiki-cream) !important;
+  padding: 60px 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+.rich-text h3 {
+  font-family: var(--font-story) !important;
+  font-size: 2.8rem !important;
+  line-height: 1.2 !important;
+  color: var(--kiki-charcoal) !important;
+  margin-bottom: 1rem !important;
+}
+
+.rich-text p {
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  color: var(--kiki-charcoal) !important;
+  max-width: 680px;
+  margin: 0 auto 1.5rem auto !important;
+}
+
+/* ==========================================================================
+   9. JUDGE.ME CUSTOMER REVIEWS (HAUTE COUTURE REDESIGN)
+   ========================================================================== */
+:root {
+  --jdgm-primary-color: var(--kiki-bordeaux) !important;
+  --jdgm-secondary-color: rgba(223, 56, 130, 0.1) !important;
+  --jdgm-star-color: #F5A623 !important;
+  --jdgm-write-review-text-color: #FFFFFF !important;
+  --jdgm-write-review-bg-color: #FFFFFF !important;
+  --jdgm-paginate-color: var(--kiki-bordeaux) !important;
+  --jdgm-border-radius: 12px !important;
+  --jdgm-reviewer-name-color: var(--kiki-charcoal) !important;
+}
+
+/* Modals & Popups complete cleanup: prevent any overlay covering screen */
+.jdgm-modal,
+.jdgm-review-widget-modal,
+.jdgm-all-reviews-widget-modal,
+.jdgm-form-modal,
+.jdgm-question-modal,
+.jdgm-preview-badge-modal {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Outer Section Spacing & Background */
+.section-app-wrapper,
+.app-wrapper {
+  background-color: var(--kiki-cream) !important;
+  padding-top: 60px !important;
+  padding-bottom: 80px !important;
+}
+
+.jdgm-all-reviews-widget-v2025,
+.jdgm-all-reviews-widget,
+.jdgm-all-reviews-page,
+.jdgm-widget {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  font-family: var(--font-func) !important;
+}
+
+/* Golden Luxury Stars (Replace Muddy Teal Green) */
+.jdgm-widget .jdgm-star,
+.jdgm-widget .jdgm-star:before,
+.jdgm-widget .jdgm-star:after,
+.jdgm-star,
+.jdgm-star:before,
+.jdgm-star:after,
+.jdgm-star.jdgm--on,
+.jdgm-star.jdgm--on:before,
+.jdgm-histogram__star .jdgm-star,
+.jdgm-all-reviews__summary-stars .jdgm-star,
+.jdgm-all-reviews__summary-stars .jdgm-star:before,
+.jdgm-rev__rating .jdgm-star,
+.jdgm-rev__rating .jdgm-star:before,
+.jdgm-preview-badge .jdgm-star,
+.jdgm-preview-badge .jdgm-star:before,
+[class*="jdgm-star"],
+[class*="jdgm-star"]:before {
+  color: #F5A623 !important;
+  text-shadow: 0 1px 2px rgba(245, 166, 35, 0.25) !important;
+}
+
+.jdgm-widget .jdgm-star.jdgm--off,
+.jdgm-widget .jdgm-star.jdgm--off:before,
+.jdgm-star.jdgm--off,
+.jdgm-star.jdgm--off:before {
+  color: #E2DBD0 !important;
+  text-shadow: none !important;
+}
+
+/* Widget Main Header & Title */
+.jdgm-all-reviews__header,
+.jdgm-rev-widg__header,
+.jdgm-all-reviews-header {
+  text-align: center !important;
+  margin-bottom: 35px !important;
+  padding-bottom: 25px !important;
+  border-bottom: 1px solid var(--kiki-border) !important;
+}
+
+.jdgm-all-reviews-widget-v2025 h2,
+.jdgm-all-reviews__title,
+.jdgm-rev-widg__title,
+[class*="all-reviews__title"],
+[class*="all-reviews-header"] h2,
+[class*="all-reviews-header"] h1 {
+  font-family: var(--font-story) !important;
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  color: var(--kiki-charcoal) !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 12px !important;
+  text-transform: capitalize !important;
+}
+
+/* Aggregate Score & Summary */
+.jdgm-all-reviews__summary,
+.jdgm-rev-widg__summary {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.jdgm-all-reviews__summary-stars,
+.jdgm-rev-widg__summary-stars {
+  font-size: 1.35rem !important;
+}
+
+.jdgm-all-reviews__summary-text,
+.jdgm-rev-widg__summary-text,
+[class*="summary-text"] {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  color: var(--kiki-charcoal) !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* "Scrivi una recensione" Luxury Pill Button */
+.jm-button,
+.jm-button--primary,
+.jm-action-buttons__button,
+button.jm-button,
+button.jm-action-buttons__button,
+.jdgm-write-rev-btn,
+.jdgm-write-rev-link,
+a.jdgm-write-rev-link,
+button.jdgm-write-rev-btn,
+.jdgm-widget-actions-wrapper a,
+.jdgm-widget-actions-wrapper button,
+[class*="action-buttons"] button,
+[class*="write-rev-btn"],
+[class*="write-rev-link"],
+.jdgm-write-rev-link {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+  border-radius: 9999px !important;
+  padding: 13px 34px !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(223, 56, 130, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+/* Ensure review form wrapper is a clean white card and NOT a pill button */
+.jdgm-write-rev,
+.jdgm-form-wrapper,
+.jdgm-form-dropdown,
+[class*="write-rev-form"],
+.jdgm-form {
+  background: #FFFFFF !important;
+  color: var(--kiki-charcoal) !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--kiki-border) !important;
+  padding: 24px !important;
+  max-width: 650px !important;
+  margin: 20px auto !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06) !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-weight: normal !important;
+}
+
+.jm-button:hover,
+.jm-button--primary:hover,
+.jm-action-buttons__button:hover,
+button.jm-button:hover,
+button.jm-action-buttons__button:hover,
+.jdgm-write-rev-btn:hover,
+.jdgm-write-rev-link:hover,
+a.jdgm-write-rev-link:hover,
+button.jdgm-write-rev-btn:hover,
+[class*="action-buttons"] button:hover,
+[class*="write-rev"]:hover {
+  background-color: var(--kiki-bordeaux) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 22px rgba(109, 30, 47, 0.35) !important;
+}
+
+/* Customer Media / Photo Previews */
+.jdgm-gallery,
+.jdgm-all-reviews-page__pictures,
+.jdgm-ugc-media-wrapper,
+[class*="media-carousel"],
+[class*="ugc-media"] {
+  margin: 25px 0 !important;
+}
+
+.jdgm-gallery__thumbnail-wrapper,
+.jdgm-gallery img,
+[class*="media-carousel"] img {
+  border-radius: 12px !important;
+  border: 1px solid rgba(232, 226, 216, 0.9) !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.jdgm-gallery__thumbnail-wrapper:hover,
+.jdgm-gallery img:hover,
+[class*="media-carousel"] img:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Tabs & Filter Bar */
+.jdgm-revs-tab__wrapper,
+[class*="revs-tab"] {
+  border-bottom: 2px solid var(--kiki-border) !important;
+  margin-bottom: 30px !important;
+}
+
+.jdgm-revs-tab-btn,
+[class*="tab-btn"] {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--kiki-charcoal) !important;
+}
+
+.jdgm-revs-tab-btn.jdgm--active,
+[class*="tab-btn"].active,
+[class*="tab-btn"].jdgm--active {
+  color: var(--kiki-fuchsia) !important;
+  border-bottom: 2px solid var(--kiki-fuchsia) !important;
+}
+
+.jdgm-sort-dropdown,
+[class*="sort-dropdown"] select,
+select[class*="sort"] {
+  border-radius: 9999px !important;
+  border: 1px solid var(--kiki-border) !important;
+  padding: 8px 18px !important;
+  background-color: #FFFFFF !important;
+  font-family: var(--font-func) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  color: var(--kiki-charcoal) !important;
+}
+
+/* ==========================================================================
+   MODERN 2-COLUMN REVIEW CARDS GRID
+   ========================================================================== */
+.jdgm-all-reviews-reviews,
+.jdgm-rev-widg__reviews,
+.jdgm-all-reviews__body .jdgm-rev-widg__reviews,
+.jdgm-all-reviews-page__reviews,
+.jdgm-rev-widg__body,
+[class*="reviews-container"],
+[class*="all-reviews-reviews"] {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 24px !important;
+  margin-top: 30px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .jdgm-all-reviews-reviews,
+  .jdgm-rev-widg__reviews,
+  .jdgm-all-reviews__body .jdgm-rev-widg__reviews,
+  .jdgm-all-reviews-page__reviews,
+  .jdgm-rev-widg__body,
+  [class*="reviews-container"],
+  [class*="all-reviews-reviews"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Individual Review Card */
+.jdgm-rev,
+[class*="jdgm-rev "] {
+  background-color: #FFFFFF !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(232, 226, 216, 0.9) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03) !important;
+  padding: 24px 28px !important;
+  margin: 0 !important;
+  border-top: none !important;
+  position: relative !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.jdgm-rev:hover,
+[class*="jdgm-rev "]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 32px rgba(109, 30, 47, 0.08) !important;
+  border-color: rgba(223, 56, 130, 0.35) !important;
+}
+
+/* Review Header: Stars, Avatar & Author */
+.jdgm-rev__header,
+[class*="rev__header"] {
+  margin-bottom: 14px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid rgba(232, 226, 216, 0.6) !important;
+}
+
+.jdgm-rev__rating,
+[class*="rev__rating"] {
+  margin-bottom: 8px !important;
+  font-size: 1.15rem !important;
+}
+
+.jdgm-rev__author-wrapper,
+[class*="author-wrapper"] {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* Avatar Circle with Brand Accent */
+.jdgm-rev__icon,
+[class*="rev__icon"],
+[class*="author-icon"] {
+  background-color: rgba(223, 56, 130, 0.12) !important;
+  color: var(--kiki-fuchsia) !important;
+  border-radius: 50% !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  width: 38px !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid rgba(223, 56, 130, 0.25) !important;
+}
+
+.jdgm-rev__author,
+[class*="author-name"] {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.98rem !important;
+  color: var(--kiki-charcoal) !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Verified Buyer Badge */
+.jdgm-rev[data-verified-buyer="true"] .jdgm-rev__buyer-badge,
+.jdgm-rev__buyer-badge,
+[class*="buyer-badge"] {
+  background-color: rgba(223, 56, 130, 0.1) !important;
+  color: var(--kiki-fuchsia) !important;
+  border: 1px solid rgba(223, 56, 130, 0.25) !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  font-size: 0.68rem !important;
+  padding: 3px 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* Review Body Text */
+.jdgm-rev__body,
+[class*="rev__body"],
+[class*="rev-body"],
+[class*="rev-content"] {
+  font-family: var(--font-func) !important;
+  font-size: 0.96rem !important;
+  line-height: 1.65 !important;
+  color: #383838 !important;
+  margin: 12px 0 16px 0 !important;
+  flex: 1 !important;
+}
+
+.jdgm-rev__body p,
+[class*="rev__body"] p {
+  color: #383838 !important;
+  line-height: 1.65 !important;
+}
+
+/* Customer Photos inside Reviews */
+.jdgm-rev__pics,
+[class*="rev__pics"] {
+  margin: 12px 0 !important;
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.jdgm-rev__pic-img,
+[class*="rev__pic-img"] {
+  border-radius: 10px !important;
+  border: 1px solid var(--kiki-border) !important;
+  max-height: 110px !important;
+  object-fit: cover !important;
+}
+
+/* Product Info Reference inside Review */
+.jdgm-rev__prod-info-wrapper,
+[class*="prod-info-wrapper"] {
+  background-color: #FAF6F0 !important;
+  border: 1px solid #ECE4D8 !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  margin-top: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.jdgm-rev__prod-info-wrapper a,
+.jdgm-rev__product-title,
+[class*="prod-title"] {
+  font-family: var(--font-story) !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  color: var(--kiki-bordeaux) !important;
+  text-decoration: none !important;
+}
+
+/* "Recensione del negozio" Tag - Clean & Subtle */
+.jdgm-rev__cf-ans,
+.jdgm-rev [class*="custom-field"],
+[class*="cf-ans"] {
+  background: rgba(109, 30, 47, 0.05) !important;
+  color: var(--kiki-bordeaux) !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  margin-top: 8px !important;
+}
+
+/* Pagination */
+.jdgm-paginate {
+  text-align: center !important;
+  margin-top: 40px !important;
+}
+
+.jdgm-paginate__page {
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 4px !important;
+  color: var(--kiki-charcoal) !important;
+  transition: all 0.2s ease !important;
+}
+
+.jdgm-paginate__page.jdgm-curt {
+  background-color: var(--kiki-fuchsia) !important;
+  color: #FFFFFF !important;
+}
+
+.jdgm-paginate__page:hover:not(.jdgm-curt) {
+  background-color: rgba(223, 56, 130, 0.15) !important;
+  color: var(--kiki-fuchsia) !important;
+}
+
+/* Right-Edge Floating Tab ("★ RECENSIONI") */
+#judgeme_ribbon,
+.jdgm-notification,
+.jdgm-badge-ribbon,
+[class*="jdgm-ribbon"],
+.jdgm-medals-section,
+[class*="medals-section"] {
+  background-color: var(--kiki-bordeaux) !important;
+  color: #FFFFFF !important;
+  border-radius: 8px 0 0 8px !important;
+  font-family: var(--font-func) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ==========================================================================
+   STATIC PREVIEW CLIENT CLEANUP & OVERRIDES
+   ========================================================================== */
+/* Suppress disruptive third-party popups, review modals, forms, floating tabs and backdrop masks */
+[class*="forms-modal"],
+[id*="shopify-forms"],
+[class*="shopify-forms"],
+.shopify-forms-modal,
+.shopify-forms-backdrop,
+.jdgm-popup-widget-wrapper,
+.jdgm-popup-card,
+.jdgm-all-reviews-widget-modal,
+.jdgm-review-widget-modal,
+.jdgm-modal,
+.jdgm-form-modal,
+.jdgm-question-modal,
+.jdgm-revs-tab,
+.jdgm-revs-tab-btn,
+.jdgm-revs-tab-badge,
+#judgeme_ribbon,
+.product-popup-modal,
+.product-popup-modal[open],
+.modal-backdrop,
+.pswp {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+/* Ensure ALL images are crystal clear, visible and not hidden by lazyload rules */
+img,
+img.lazyload,
+.no-js img.lazyload,
+.lazyloading,
+.lazyload {
+  display: block !important;
+  opacity: 1 !important;
+  filter: none !important;
+  visibility: visible !important;
+}
+
+/* Ensure smooth image zoom and transitions */
+.product-featured-image,
+.product__media img {
+  transition: transform 0.3s ease;
+}
+
+/* Audio Player Luxury Styling */
+.kiki-story-audio-card {
+  background: #FAF6F0;
+  border: 1px solid #E8E2D8;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 15px rgba(109,30,47,0.04);
+}
+.kiki-story-audio-card audio {
+  width: 100%;
+  height: 38px;
+  outline: none;
+}
